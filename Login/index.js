@@ -33,6 +33,17 @@ const form = {
     password: () => document.getElementById("password")
 }
 
+function recuperar() {
+    firebase.auth().sendPasswordResetEmail(
+        form.email().value
+    ).then(response => {
+        alert("Foi enviado um email de recuperação para "+form.email().value)
+        window.location.href = "/login.html";
+    }).catch(error => {
+        alert(getErrorMessage(error));
+    });
+}
+
 function login(){
     firebase.auth().signInWithEmailAndPassword(
         form.email().value, form.password().value
@@ -62,4 +73,8 @@ function getErrorMessage(error) {
 
 function registrar(){
     window.location.href = "cadastro.html";
+}
+
+function changeRecuperar() {
+    window.location.href = "recuperarSenha.html";
 }

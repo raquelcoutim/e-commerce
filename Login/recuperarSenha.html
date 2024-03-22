@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Login/style.css">
-    <title>Cadastro</title>
+    <title>Recuperar Senha</title>
 </head>
 <body>
     <form>
         <div>
             <div><label>Digite seu Email</label></div>
-            <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="validateFields()"/>
+            <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="validateFields()" />
             <div>
-                <div><label>Digite sua Senha</label></div>
-                <input type="password" name="password" id="password" placeholder="Senha" onchange="validateFields()"/>
-            </div>
-            <div>
-                <button type="button" class="outline" onclick="cadastro()">Cadastrar</button>
+                <button type="button" class="clear" id="recover-password-button" disabled="true" onclick="recuperar()">Recuperar senha</button>
             </div>
     </form>
     <script src="/Login/index.js"> </script>

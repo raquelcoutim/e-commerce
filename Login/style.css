@@ -1,5 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background: rgb(45, 211, 111);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,11 +20,14 @@ input, button {
     padding: 10px;
     margin-bottom: 10px;
     width: -webkit-fill-available;
+    border: 1px solid #000;
 }
 button {
     cursor: pointer;
 }
 button:active {
+    background-color: #ff944c;
+    color: white;
     opacity: 0.8;
 }
 .clear {
@@ -28,16 +36,17 @@ button:active {
     color: black;
 }
 .solid {
-    background: white;
+    background: #ff944c;
     border: none;
-    color: rgb(45, 211, 111);
+    color: white;
 }
 .outline {
-    background: transparent;
-    color: white;
-    border: 1px solid white;
+    background: #ff944c;
+    color: black;
+    
 }
 button[disabled] {
-    opacity: 0.8;
-    color: grey;
+    background-color: #ff944c;
+    opacity: 0.5;
+    color: white;
 }
