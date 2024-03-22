@@ -43,6 +43,16 @@ function login(){
     });
 }
 
+function cadastro(){
+    firebase.auth().createUserWithEmailAndPassword(
+        form.email().value, form.password().value
+    ).then(response => {
+        window.location.href = "/index.html";
+    }).catch(error => {
+        alert(getErrorMessage(error));
+    });
+}
+
 function getErrorMessage(error) {
     if (error.code == "auth/user-not-found") {
         return "Usuário nao encontrado";
@@ -51,5 +61,5 @@ function getErrorMessage(error) {
 }
 
 function registrar(){
-    window.location.href = "registro.html";
+    window.location.href = "cadastro.html";
 }
